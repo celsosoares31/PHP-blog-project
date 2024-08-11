@@ -1,0 +1,58 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+  width: 100vw !important;
+}
+.admin {
+  margin-top: 50px !important;
+  padding: 60px;
+}
+.admin-lg {
+  margin-top: 150px;
+  padding: 60px;
+}
+.nav {
+  width: 100% !important;
+}
+.left-side {
+  height: 100vh !important;
+  overflow-y: scroll !important;
+}
+
+.right-side {
+  height: 100vh !important;
+  overflow-y: scroll !important;
+}
+
+.main {
+  margin-top: 70px !important;
+}
+.profile_pic {
+  width: 50px !important;
+  height: 50px !important;
+}
+.accordion-button {
+  background-color: transparent !important;
+  height: 60px !important;
+}
+.p-fixed {
+  width: 100vw !important;
+  height: 100vh !important;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  background-color: #fff;
+}
+.hide {
+  display: none !important;
+}
+.post_pic {
+  height: 65vh !important;
+}
+.form-label {
+  width: 100px !important;
+}
+.img-profile {
+  height: 50px !important;
+  width: 50px !important;
+  border-radius: 50%;
+}

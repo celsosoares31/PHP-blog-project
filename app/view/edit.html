@@ -1,0 +1,107 @@
+<div class="container">
+  {# Start navbar #}
+  <div class="nav w-100 d-block position-fixed top-0 z-3 start-0">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary px-5 py-3">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse"
+          id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="d-flex align-items-center">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="index.php"
+                  ><i class="fa-solid fa-house me-2"></i>Home</a
+                >
+              </li>
+              <li class="nav-item ms-4 d-flex">
+                <img
+                  class="img-profile"
+                  src="public/img/{{user.user_pic}}" />
+                <span class="ms-3 pt-4">{{user.username}}</span>
+              </li>
+            </div>
+          </ul>
+          <a
+            class="ms-4 btn btn-outline-success"
+            type="submit"
+            href="index.php?page=user&action=logout"
+            >Sair<i class="fa-solid fa-right-from-bracket ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+  {# End navbar #}
+  <div class="admin-lg shadow w-75 h-50 mx-auto">
+    <form
+      class="post-form w-100 mx-auto"
+      method="post"
+      action="index.php"
+      enctype="multipart/form-data">
+      <div class="row">
+        <div class="mb-3 col-lg-6 col-md-12 col-sm-6">
+          <label
+            for="exampleInputEmail1"
+            class="form-label"
+            ><strong>Titulo</strong></label
+          >
+          <input
+            type="text"
+            name="postId"
+            value="{{posts.id}}"
+            hidden />
+          <input
+            name="post_title"
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            value="{{posts.post_title}}"
+            required />
+        </div>
+        <div class="mb-3 col-lg-6 col-md-12 col-sm-6">
+          <label class="form-label"><strong>Foto</strong></label>
+          <input
+            name="post_picture"
+            id="post_picture"
+            type="file"
+            class="form-control" />
+        </div>
+      </div>
+      <div class="mb-3">
+        <label
+          for="exampleInputText"
+          class="form-label"
+          ><strong>Conteudo</strong></label
+        >
+        <textarea
+          name="post_content"
+          class="form-control"
+          id="exampleInputText"
+          rows="5"
+          required>
+{{posts.post_content}}</textarea
+        >
+      </div>
+      <div class="my-3 d-flex justify-content-end">
+        <input
+          type="submit"
+          class="btn btn-outline-secondary w-25"
+          name="updatePost"
+          value="Enviar" />
+      </div>
+    </form>
+  </div>
+</div>

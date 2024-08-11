@@ -1,0 +1,28 @@
+<main class="mx-auto main">
+  <ul class="list-group w-75 mx-auto my-0 mb-5">
+    {% for post in posts %}
+    <li class="list-group-item mt-3 border-0 shadow-sm">
+      <div class="card border-0">
+        <div class="card-body">
+          <h4 class="card-title">{{post.post_title}}</h4>
+          <p class="card-text">{{post.post_content}}</p>
+          <p class="card-text"><small class="text-body-secondary">Criado em: {{post.created_at}}</small></p>
+          <div class="d-flex justify-content-end">
+            <a
+              class="btn btn-secondary"
+              type="submit"
+              href="index.php?page=post&action=viewSingle&id={{post.id}}">
+              Ler mais..
+            </a>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    {% else %}
+    <hr class="mt-5" />
+    <h4 class="mx-auto">Nenhum post encontrado</h4>
+
+    {% endfor %}
+  </ul>
+</main>
